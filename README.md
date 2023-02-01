@@ -40,6 +40,29 @@
     ```
     git pull + link https do seu repositório
     ```
+    -------------------------
+ ### 4° tópico: Salvando localmente as mudanças que você fez e salvando remotamente
+   * Ao passar seu repositório do github para seu computador você ficará livre para fazer as mudanças que desejar sem alterar o arquivo remoto. Porém, com forme você for fazendo as mudanças, torna-se necessário salvá-las para não acabar perdendo suas atualizações.
+   * Para isso utilizamos no terminal o comando git commit, que fará os salvamento das mundaças, mas temas dois jeitos de fazer esse salvamento:
+     * Salvando um arquivo em específico: 
+       * git commit + nome do arquivo modificado + -m "texto contendo os comentários das modificações"
+       * Comando: 
+       ```
+       git commit README.md -m "Adicionando mudanças do README"
+       ```
+     * Salvando todos os arquivos de uma vez:
+       * git commit + . + -m "texto contendo os comentários das modificações":
+       * Comando:
+       ```
+       git commit . -m "Adicionando mudanças do README"
+       ```
+     * #### Observação: Os comentários são opcioanis, então se você não quiser não é necssário utilizar o -m "texto", porém é uma boa prática você fazer um comentário sempre que uma mudança for feita.
+   * Após salvar e atualizar seu arquivos, é sempre bom passá-los para a nuvem para se precaver de problemas, nunca se sabe quando um arquivo vá corromper, ne?
+   * Para isso utilizaremos o terminal novamente, mas dessa vez usando o comando git push origin + nome da branch, que fará o salvamento das mudanças no github
+     * Comando: 
+       ```
+       git push origin main (branch aleatória)
+       ```
  -------------------------
  ### x° tópico: Comandos e o que eles fazem
   * git clone: 
