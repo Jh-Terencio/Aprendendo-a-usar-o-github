@@ -47,15 +47,15 @@
      * Salvando um arquivo em específico: 
        * git commit + nome do arquivo modificado + -m "texto contendo os comentários das modificações"
        * Comando: 
-       ```
-       git commit README.md -m "Adicionando mudanças do README"
-       ```
+         ```
+         git commit README.md -m "Adicionando mudanças do README"
+         ```
      * Salvando todos os arquivos de uma vez:
        * git commit + . + -m "texto contendo os comentários das modificações":
        * Comando:
-       ```
-       git commit . -m "Adicionando mudanças do README"
-       ```
+         ```
+         git commit . -m "Adicionando mudanças do README"
+         ```
      * #### Observação: Os comentários são opcioanis, então se você não quiser não é necssário utilizar o -m "texto", porém é uma boa prática você fazer um comentário sempre que uma mudança for feita.
    * Após salvar e atualizar seu arquivos, é sempre bom passá-los para a nuvem para se precaver de problemas, nunca se sabe quando um arquivo vá corromper, ne?
    * Para isso utilizaremos o terminal novamente, mas dessa vez usando o comando git push origin + nome da branch, que fará o salvamento das mudanças no github
@@ -63,8 +63,39 @@
        ```
        git push origin main (branch aleatória)
        ```
+       -------------------------
+ ### 5° tópico: O que são branchs, para que elas servem e como funcionam
+   * O que são: 
+     * Os branches (ramificações, em tradução livre) são uma funcionalidade do Git que permite que você trabalhe em diferentes versões do seu código em paralelo. Um branch é uma linha separada de desenvolvimento que permite que você faça modificações ao seu código sem afetar a principal linha de desenvolvimento.
+     * Quando você cria um novo branch, ele é criado como uma cópia da linha principal (também conhecida como "branch mestre" ou "branch principal") e todas as suas alterações nesse novo branch são independentes da linha principal. Quando você estiver satisfeito com suas alterações, pode unir seu branch com a linha principal usando uma operação chamada "merge".
+     * Os branches são amplamente utilizados para desenvolvimento de novos recursos, correção de bugs e experimentação em projetos de software.
+   * Como criar uma branch?
+     * Para criar uma branch você deve ir no terminal e digitar o comando git checkout -b + nome da branch
+     * Comando:
+       ```
+       git checkout -b desenvolvimento
+       ``` 
+   * Como trocar de uma branch para outra?
+     * Para isso utilizamos o comando git switch + nome da branch
+     * Comando:
+       ```
+       git switch main
+       ```
+        -------------------------
+ ### 6° tópico: Como mandar as informações de uma branch para outra (merge)
+   * Quando você termina uma de suas branchs e deseja passar para a main todas as mudanças é necessário utilizar um comando chamado git merge + nome da branch que quer ser passas
+     * Comando:
+       ```
+       git merge desenvolvimento
+       ```
+   * Ao fazer isso, tudo que tiver na branch de desenvolvimento será passado para a branch principal
+   * E para finalizar, você tem que dar um push e atualizar o github
+     * Comando:
+       ```
+       git push origin main
+       ``` 
  -------------------------
- ### x° tópico: Comandos e o que eles fazem
+ ### 7° tópico: Comandos e o que eles fazem
   * git clone: 
     * O git clone é um comando do Git que permite clonar (copiar) um repositório remoto para o seu computador local. Esse comando cria uma cópia idêntica do repositório remoto, incluindo todos os arquivos, histórico de commits e informações de branch. Ao clonar um repositório, você pode trabalhar offline, fazer alterações e, em seguida, enviar suas alterações para o repositório remoto, mantendo-o atualizado. Além disso, o git clone também permite a colaboração em equipe, pois cada membro da equipe pode clonar o repositório remoto e trabalhar em sua própria cópia.
   * git pull:
@@ -77,4 +108,11 @@
     * O comando git log é a ferramenta básica do Git para explorar o histórico de um repositório. É usado quando se precisa encontrar uma versão específica de um projeto ou saber quais alterações vão ser implantadas por meio do merge de uma ramificação de recurso.
   * git restore –source: 
     * O git restore é uma nova opção quando estamos trabalhando e precisamos restaurar algum arquivo ou o projeto por completo, e isso o git checkout também faz, porém o git restore é especificamente para trabalhar com essa parte de restauração de arquivos ou projeto ao um ponto anterior que chamamos de fonte de restauração
+  * git branch:
+    * Irá mostrar todas as branchs existentes no seu repositório
+ -------------------------
+ ### 8° tópico: Considerações finais
+   * Aqui termina meu curso de git e github da alura, consegui aprender várias coisas que sempre tive dúvida e finalmente aprendi como funciona as coisas
+   * Vou deixar um link aqui com um artigo feito por um professor da alura sobre os comandos do github
+     [Artigo do professor](https://guilhermeonrails.github.io/manual-do-git-e-github/)
 
