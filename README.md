@@ -5,7 +5,7 @@
   * GitHub é uma plataforma de hospedagem de código e desenvolvimento de software. É uma comunidade de desenvolvedores onde é possível compartilhar, colaborar e contribuir em projetos de software usando o controle de versão Git. Além disso, ele fornece uma ampla gama de ferramentas e recursos para gerenciar projetos de software, incluindo bug tracking, tarefas e documentação.
   * O GitHub serve como uma plataforma para o desenvolvimento de software colaborativo, onde os desenvolvedores podem compartilhar, colaborar e contribuir em projetos de software de forma eficiente. Além disso, ele fornece uma ampla gama de ferramentas e recursos para gerenciar projetos de software, incluindo versionamento de código, gerenciamento de bugs, tarefas, documentação e muito mais. O GitHub também é amplamente utilizado como um repositório para projetos open-source, permitindo que a comunidade contribua e colabore para melhorá-los.
   
-  -------------------------
+-------------------------
 ### 1° tópico: Criação de arquivos pelo github 
  * Criar arquivos e salvá-los no GitHub é importante, pois permite o acesso aos seus arquivos de forma remota, sem precisar estar com sua máquina. Além disso, ao trabalhar em equipe, é necessário ter um local compartilhado para todos da equipe, garantindo assim uma organização mais eficiente.
  * Vamos iniciar então esse tópico, como criamos um arquivo em um repositório diretamente do github:
@@ -16,7 +16,7 @@
     * Adicione um comentario para informar aos demais colaboradores quais mudanças foram feitas.
     * Clique no botão "Commit new file".
     
-    -------------------------
+ -------------------------
  ### 2° tópico: Para que serve o commit e por que ele é importante?
   * O commit é uma ação no controle de versão Git que permite salvar as alterações realizadas em arquivos em uma determinada versão. Cada commit é identificado por um número único de hash e pode conter uma mensagem descritiva que explica as alterações realizadas. Os commits são agrupados em ramos (branches) e permitem a colaboração em equipe, pois é possível visualizar e comparar as diferenças entre as versões do código. Além disso, os commits também permitem a reversão de alterações indesejadas, a criação de novos ramos para experimentações e a integração de mudanças realizadas por diferentes desenvolvedores.
 
@@ -40,7 +40,7 @@
     ```
     git pull + link https do seu repositório
     ```
-    -------------------------
+ -------------------------
  ### 4° tópico: Salvando localmente as mudanças que você fez e salvando remotamente
    * Ao passar seu repositório do github para seu computador você ficará livre para fazer as mudanças que desejar sem alterar o arquivo remoto. Porém, com forme você for fazendo as mudanças, torna-se necessário salvá-las para não acabar perdendo suas atualizações.
    * Para isso utilizamos no terminal o comando git commit, que fará os salvamento das mundaças, mas temas dois jeitos de fazer esse salvamento:
@@ -63,7 +63,7 @@
        ```
        git push origin main (branch aleatória)
        ```
-       -------------------------
+ -------------------------
  ### 5° tópico: O que são branchs, para que elas servem e como funcionam
    * O que são: 
      * Os branches (ramificações, em tradução livre) são uma funcionalidade do Git que permite que você trabalhe em diferentes versões do seu código em paralelo. Um branch é uma linha separada de desenvolvimento que permite que você faça modificações ao seu código sem afetar a principal linha de desenvolvimento.
@@ -81,7 +81,7 @@
        ```
        git switch main
        ```
-        -------------------------
+ -------------------------
  ### 6° tópico: Como mandar as informações de uma branch para outra (merge)
    * Quando você termina uma de suas branchs e deseja passar para a main todas as mudanças é necessário utilizar um comando chamado git merge + nome da branch que quer ser passas
      * Comando:
@@ -95,7 +95,25 @@
        git push origin main
        ``` 
  -------------------------
- ### 7° tópico: Comandos e o que eles fazem
+ ### 7° tópico: Como inicializar um repositório através de um arquivo ja existente na sua máquina?
+  * Nem sempre que você estiver iniciando um projeto você ja vai ter um repositório criado, as vezes você apenas começa nele pelo seu computador e deixa lá, mas é muito importante que ele esteja salvo em mais de um lugar para garantir que se alguma coisa aconteça com o seu computador ele vai estar salvo em algum sistema de nuvem. Agora ensinarei os passos de como fazer isso:
+  * Através de um terminal seja do vs code ou qualquer outro, como o git bash, você irá digitar o comando git init e um novo repositório será inicializado
+  * Comando:
+    ```
+    git init
+    ```
+  * Após isso será necessário dar o comando git add .
+  * Comando:
+    ```
+    git add .
+    ```
+  * Depois disso será necessário commitar para salvar as informações
+  * Comando:
+    ```
+    git commit -m "Adicionando arquivos no repositório"
+    ```
+ -------------------------
+ ### 8° tópico: Comandos e o que eles fazem
   * git clone: 
     * O git clone é um comando do Git que permite clonar (copiar) um repositório remoto para o seu computador local. Esse comando cria uma cópia idêntica do repositório remoto, incluindo todos os arquivos, histórico de commits e informações de branch. Ao clonar um repositório, você pode trabalhar offline, fazer alterações e, em seguida, enviar suas alterações para o repositório remoto, mantendo-o atualizado. Além disso, o git clone também permite a colaboração em equipe, pois cada membro da equipe pode clonar o repositório remoto e trabalhar em sua própria cópia.
   * git pull:
@@ -105,13 +123,15 @@
   * git push: 
     * O git push é um comando do Git que permite enviar as alterações salvas localmente em um repositório para o repositório remoto no Github ou outra plataforma de hospedagem de código. Quando você faz um push, as alterações que você fez localmente são enviadas para o repositório remoto, onde podem ser acessadas por outros colaboradores. Além disso, o git push permite que você mantenha o repositório remoto atualizado com as alterações mais recentes. É importante destacar que o push deve ser feito após o commit, já que o git commit salva as alterações localmente, enquanto o git push envia as alterações para o repositório remoto.
   * git log –oneline: 
-    * O comando git log é a ferramenta básica do Git para explorar o histórico de um repositório. É usado quando se precisa encontrar uma versão específica de um projeto ou saber quais alterações vão ser implantadas por meio do merge de uma ramificação de recurso.
+    * O comando git log é a ferramenta básica do Git para explorar o histórico de um repositório. É usado quando se precisa encontrar uma versão específica de um projeto ou saber quais alterações vão ser implantadas por meio do merge de uma ramificação de recurso. [Site com várias variações do git log](https://devhints.io/git-log)
   * git restore –source: 
     * O git restore é uma nova opção quando estamos trabalhando e precisamos restaurar algum arquivo ou o projeto por completo, e isso o git checkout também faz, porém o git restore é especificamente para trabalhar com essa parte de restauração de arquivos ou projeto ao um ponto anterior que chamamos de fonte de restauração
   * git branch:
     * Irá mostrar todas as branchs existentes no seu repositório
+  * git init: 
+    * O comando git init é utilizado para inicializar um novo repositório Git em um diretório específico. Ele cria uma pasta oculta chamada .git que armazena toda a informação sobre o repositório, incluindo o histórico de versões e as referências dos branches. O git init deve ser executado apenas uma vez para cada repositório que você criar. A partir daí, você pode adicionar arquivos, fazer commit e compartilhar seu código com outros colaboradores usando o Git.
  -------------------------
- ### 8° tópico: Considerações finais
+ ### 9° tópico: Considerações finais
    * Aqui termina meu curso de git e github da alura, consegui aprender várias coisas que sempre tive dúvida e finalmente aprendi como funciona as coisas
    * Vou deixar um link aqui com um artigo feito por um professor da alura sobre os comandos do github
      [Artigo do professor](https://guilhermeonrails.github.io/manual-do-git-e-github/)
